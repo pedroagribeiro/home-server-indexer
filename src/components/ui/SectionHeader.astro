@@ -1,0 +1,17 @@
+---
+import FadedText from './FadedText.astro'
+import Divider from './Divider.astro'
+
+export interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="flex flex-col space-y-1">
+    <FadedText>
+        <p class="text-2xl">{title}</p>
+    </FadedText>
+    <Divider />
+</div>

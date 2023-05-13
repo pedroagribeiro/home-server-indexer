@@ -1,0 +1,36 @@
+---
+import RootLayout from '../layouts/RootLayout.astro'
+import SectionHeader from '../components/ui/SectionHeader.astro'
+import Service from '../components/ui/Service.astro'
+---
+
+<RootLayout title="Jarvis Indexer">
+	<main class="py-16">
+		<!-- VPN -->
+		<SectionHeader title="VPN" />
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 py-4 pb-8">
+			<Service logo="./images/openvpn_logo.png" title="OpenVPN" description="OpenVPN client in order to provide a way to connect to the local network" port={943} />
+		</div>
+		<!-- Development -->
+		<SectionHeader title="Development" />
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 py-4 pb-8">
+			<Service logo="./images/livebook_logo.png" title="Livebook" description="Interactive development environment for the Elixir programming language" port={30001} />
+		</div>
+		<!-- Monitoring -->
+		<SectionHeader title="Monitoring" />
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 py-4 pb-8">
+			<Service logo="./images/graphana_logo.png" title="Grafana" description="Provides monitoring capabilities to various server parameters" port={3000} />
+			<Service logo="./images/prometheus_logo.png" title="Prometheus" description="Highly configurable metrics provider" port={9090} />
+		</div>
+		<!-- Media -->
+		<SectionHeader title="Media & Storage" />
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 py-4 pb-8">
+			<Service logo="./images/jellyfin_logo.png" title="Jellyfin" description="Media Server that provides a streaming service like interface in order to consume media" port={8096} />
+		</div>
+		<!-- Downloads -->
+		<SectionHeader title="Downloads" />
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 py-4 pb-8">
+			<Service logo="./images/qbittorrent_logo.png" title="qBittorrent" description="Web based torrent client that runs a service" port={8080} />
+		</div>
+	</main>
+</RootLayout>
