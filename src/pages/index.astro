@@ -19,6 +19,7 @@ import Service from '../components/ui/Service.astro'
 		<!-- Monitoring -->
 		<SectionHeader title="Monitoring" />
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 py-4 pb-8">
+			<Service logo="./images/portainer_logo.png" title="Portainer" description="Graphic user interface for a facilitated docker environemt management" port={9443} https={true} /> 
 			<Service logo="./images/graphana_logo.png" title="Grafana" description="Provides monitoring capabilities to various server parameters" port={3000} />
 			<Service logo="./images/prometheus_logo.png" title="Prometheus" description="Highly configurable metrics provider" port={9090} />
 		</div>
