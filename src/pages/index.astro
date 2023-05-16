@@ -4,9 +4,14 @@ import SectionHeader from '../components/ui/SectionHeader.astro'
 import Service from '../components/ui/Service.astro'
 ---
 
-<RootLayout title="Jarvis Indexer">
+<RootLayout title="Home Server">
 	<main class="py-16">
-		<!-- VPN -->
+		<!-- Smart Home -->
+		<SectionHeader title="Smart Home" />
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 py-4 pb-8">
+			<Service logo="./images/home_assistant_logo.png" title="Home Assistant" description="Open source home automation that puts local control and privacy first" port={8123} />
+		</div>
+		<!-- Networking -->
 		<SectionHeader title="VPN" />
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 py-4 pb-8">
 			<Service logo="./images/openvpn_logo.png" title="OpenVPN" description="OpenVPN client in order to provide a way to connect to the local network" port={943} />
